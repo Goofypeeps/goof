@@ -1,0 +1,23 @@
+<a href="javascript:openSite()">asdf</a>
+<script>
+var links = [
+              "docs.google.com/forms/d/1FmrlxM07NGktg1tJfTSN9B0Ywriok0Z0jQyjJOxOMQU/edit",
+              "docs.google.com/forms/d/1ELN282ucZAzOyIwdjjVuNm8PlfVnwkpzB-Cz4pyDlYs/edit?pli=1"
+              
+              ]
+
+            function openSite() {
+              // get a random number between 0 and the number of links
+              var randIdx = Math.random() * links.length;
+              // round it, so it can be used as array index
+              randIdx = parseInt(randIdx, 10);
+              
+              // construct the link to be opened
+              var link = 'https://' + links[randIdx];
+              window.open(link, '_blank');
+              return link;
+              };
+             
+    
+    document.getElementById("link").innerHTML = openSite();
+</script>
